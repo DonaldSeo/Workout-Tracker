@@ -128,12 +128,12 @@
 		407AE65A243C00AC000B8097 /* Workout-Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				407AE69A243C039C000B8097 /* Model */,
 				407AE65B243C00AC000B8097 /* AppDelegate.swift */,
 				407AE65D243C00AC000B8097 /* SceneDelegate.swift */,
-				407AE65F243C00AC000B8097 /* ViewController.swift */,
-				407AE661243C00AC000B8097 /* Main.storyboard */,
-				407AE664243C00AF000B8097 /* Assets.xcassets */,
-				407AE666243C00AF000B8097 /* LaunchScreen.storyboard */,
+				407AE697243C036E000B8097 /* Controllers */,
+				407AE698243C0379000B8097 /* View */,
+				407AE699243C038A000B8097 /* Supporting Files */,
 				407AE669243C00AF000B8097 /* Info.plist */,
 			);
 			path = "Workout-Tracker";
@@ -160,6 +160,38 @@
 				407AE689243C00B3000B8097 /* PushNotificationPayload.apns */,
 			);
 			path = "Workout-Tracker WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		407AE697243C036E000B8097 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				407AE65F243C00AC000B8097 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		407AE698243C0379000B8097 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				407AE661243C00AC000B8097 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		407AE699243C038A000B8097 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				407AE664243C00AF000B8097 /* Assets.xcassets */,
+				407AE666243C00AF000B8097 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		407AE69A243C039C000B8097 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
