@@ -19,6 +19,7 @@
 		40758384245763DC00C12964 /* FinishedExerciseSets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4075838224536C5400C12964 /* FinishedExerciseSets.swift */; };
 		407583862458CC7600C12964 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407583852458CC7600C12964 /* ProgressViewController.swift */; };
 		407583892458EA5300C12964 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407583882458EA5300C12964 /* Helper.swift */; };
+		4075838B2460C33700C12964 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4075838A2460C33700C12964 /* SwipeTableViewController.swift */; };
 		407AE65C243C00AC000B8097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407AE65B243C00AC000B8097 /* AppDelegate.swift */; };
 		407AE65E243C00AC000B8097 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407AE65D243C00AC000B8097 /* SceneDelegate.swift */; };
 		407AE663243C00AC000B8097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407AE661243C00AC000B8097 /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 		4075838224536C5400C12964 /* FinishedExerciseSets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedExerciseSets.swift; sourceTree = "<group>"; };
 		407583852458CC7600C12964 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
 		407583882458EA5300C12964 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		4075838A2460C33700C12964 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		407AE658243C00AC000B8097 /* Workout-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Workout-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		407AE65B243C00AC000B8097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		407AE65D243C00AC000B8097 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				4075837C24509E7C00C12964 /* SessionExerciseListViewController.swift */,
 				40758380245358BD00C12964 /* LogExerciseViewController.swift */,
 				407583852458CC7600C12964 /* ProgressViewController.swift */,
+				4075838A2460C33700C12964 /* SwipeTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				407583892458EA5300C12964 /* Helper.swift in Sources */,
 				40758373244F53E900C12964 /* ExerciseListViewController.swift in Sources */,
 				40758375244F547500C12964 /* WorkoutListViewController.swift in Sources */,
+				4075838B2460C33700C12964 /* SwipeTableViewController.swift in Sources */,
 				40758371244F412C00C12964 /* Exercise.swift in Sources */,
 				407583862458CC7600C12964 /* ProgressViewController.swift in Sources */,
 				4075837D24509E7C00C12964 /* SessionExerciseListViewController.swift in Sources */,
