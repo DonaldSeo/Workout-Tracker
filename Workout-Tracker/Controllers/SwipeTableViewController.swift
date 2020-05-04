@@ -8,6 +8,7 @@
 
 import Foundation
 import SwipeCellKit
+import UIKit
 
 class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegate {
     
@@ -19,7 +20,16 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
         tableView.rowHeight = 80.0
     }
     
-    // MARK: - swipetableview delegate
+    // MARK: - tableview Datasource
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SwipeTableViewCell
+        
+        cell.delegate = self
+        
+        return cell
+    }
+
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
         
         guard orientation == .right else { return nil }
@@ -37,9 +47,16 @@ class SwipeTableViewController: UITableViewController, SwipeTableViewCellDelegat
         return [deleteAction]
     }
     
+    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeTableOptions {
+        var options = SwipeTableOptions()
+        options.expansionStyle = .destructive
+        return options
+    }
+    
     func updateModel(at indexPath: IndexPath) {
+        // Update our data model.
         
-        print("item deleted from superclass")
+        print("Item deleted from superclass")
     }
     
     
