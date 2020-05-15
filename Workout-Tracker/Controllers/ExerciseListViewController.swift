@@ -11,7 +11,7 @@ import RealmSwift
 import UIKit
 import SCLAlertView
 
-class ExerciseListViewController: UITableViewController {
+class ExerciseListViewController: SwipeTableViewController {
     
     var exercises: Results<Exercise>?
     let realm = try! Realm()
@@ -39,19 +39,10 @@ class ExerciseListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ExerciseCell", for: indexPath)
-        
-        if let exercise = exercises?[indexPath.row] {
-            cell.textLabel?.text = exercise.title
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
+       
+        cell.textLabel?.text = exercises?[indexPath.row].title ?? "No exercise Items Added"
             
-            //ternery operator
-            // value = condition ? valueIfTrue : valueIfFalse
-            
-        } else {
-            cell.textLabel?.text = "No Items Added"
-        }
-        
-        
         return cell
     }
     
@@ -130,6 +121,19 @@ class ExerciseListViewController: UITableViewController {
         exercises = selectedWorkout?.exercises.sorted(byKeyPath: "title", ascending: true)
         tableView.reloadData()
 
+    }
+    // MARK: - Delete date from swipe
+    
+    override func updateModel(at indexPath: IndexPath) {
+        if let exerciseForDeletion = self.exercises?[indexPath.row] {
+            do {
+                try self.realm.write {
+                    self.realm.delete(exerciseForDeletion)
+                }
+            } catch {
+                print("error deleting category, \(error)")
+            }
+        }
     }
 }
 

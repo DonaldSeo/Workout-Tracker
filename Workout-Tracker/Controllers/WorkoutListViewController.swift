@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 import UIKit
 
-class WorkoutListViewController: UITableViewController {
+class WorkoutListViewController: SwipeTableViewController {
     let realm = try! Realm()
         
     var workoutArray: Results<Workout>?
@@ -60,7 +60,7 @@ class WorkoutListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WorkoutCell", for: indexPath)
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
         cell.textLabel?.text = workoutArray?[indexPath.row].name ?? "No workout categories added"
         
@@ -104,6 +104,20 @@ class WorkoutListViewController: UITableViewController {
 
         tableView.reloadData()
 
+    }
+    
+    // MARK: - Delete date from swipe
+    
+    override func updateModel(at indexPath: IndexPath) {
+        if let workoutForDeletion = self.workoutArray?[indexPath.row] {
+            do {
+                try self.realm.write {
+                    self.realm.delete(workoutForDeletion)
+                }
+            } catch {
+                print("error deleting category, \(error)")
+            }
+        }
     }
 }
 
